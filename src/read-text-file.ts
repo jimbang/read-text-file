@@ -118,7 +118,6 @@ interface BomMapItem
 const utf8FileTextEncoding = "utf-8";
 const defaultTextFileEncoding = utf8FileTextEncoding;
 
-// TODO: support others? at least utf-16??
 let bomMap =
 	{
 		bomUTF_8: { bom: [0xEF, 0xBB, 0xBF], encoding: utf8FileTextEncoding } as BomMapItem,
