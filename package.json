@@ -1,7 +1,7 @@
 {
   "name": "read-text-file",
   "version": "0.0.0-alpha.2",
-  "description": "handles byte order marks when reading a text file",
+  "description": "handles and strips byte order marks when reading a text file",
   "keywords": [
     "textfile",
     "text",
