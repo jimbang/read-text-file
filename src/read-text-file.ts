@@ -146,10 +146,10 @@ let bomMap =
 	};
 
 let maxBomLength: number = 0;
+
 for (let bomMapItemName in bomMap)
 {
 	let bomMapItem = (bomMap as any)[bomMapItemName] as BomMapItem;
-
 	maxBomLength = Math.max(maxBomLength, bomMapItem.bom.length);
 }
 
