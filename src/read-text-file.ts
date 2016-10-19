@@ -3,7 +3,7 @@ import * as path from "path";
 
 import { StringDecoder } from "string_decoder";
 
-export async function readTextFile(path: string): Promise<string>
+export async function read(path: string): Promise<string>
 {
 	let stat = await fileStat(path);
 
@@ -40,7 +40,7 @@ export async function readTextFile(path: string): Promise<string>
 	return result;
 }
 
-export function readTextFileSync(path: string): string
+export function readSync(path: string): string
 {
 	let stat = fs.statSync(path);
 
