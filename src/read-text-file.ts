@@ -62,6 +62,7 @@ export function readSync(path: string): string
 function decode(buffer: Buffer) : string
 {
 	// TODO: fallback for when confidence is too low? (pass it as "defaultEncoding" below)
+	// TODO: this is decoding the whole file twice (once to get encoding name, then again to really decode... should just take a portion of it to get the encoding name)
 	let encodingName = getEncodingName(buffer);
 	return iconv.decode(buffer, encodingName, {stripBOM: true, addBOM: false, defaultEncoding: "utf-8"});
 }
