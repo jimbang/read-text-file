@@ -69,7 +69,8 @@ function decode(buffer: Buffer) : string
 function getEncodingName(buffer: Buffer) : string
 {
 	// TODO: set min confidence?
-	return jschardet.detect(buffer);
+	let result = jschardet.detect(buffer);
+	return result.encoding;
 }
 
 // TODO: share these, or try fs-promise (or similar)
