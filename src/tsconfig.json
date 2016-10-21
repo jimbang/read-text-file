@@ -3,6 +3,9 @@
 		"noEmit": false,
 		"outDir": "../build",
         "rootDir": "./",
+		"typeRoots": [
+			"../node_modules/@types"
+		],
 		"inlineSourceMap": true,
 		"inlineSources": true,
 		"declaration": true,
