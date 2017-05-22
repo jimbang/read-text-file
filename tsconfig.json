@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"noEmit": false,
+
+		"target": "es5",
+		"module": "commonjs",
+		"lib": [ "dom", "es2015" ],
+
+		"moduleResolution": "node",
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+
+		"outDir": "./dist",
+		"declaration": true,
+
+		"inlineSourceMap": true,
+		"inlineSources": true,
+
+		"noImplicitReturns": true,
+		"noImplicitAny": true,
+		"noEmitOnError": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"removeComments": false
+	},
+
+	"compileOnSave": false,
+	"include": [
+		"./src/**/*"
+	]
+}
