@@ -1,9 +1,7 @@
 import * as fs from "fs";
-import * as path from "path";
 import * as iconv from "iconv-lite";
-let jschardet = require("jschardet");
 
-import { StringDecoder } from "string_decoder";
+let jschardet = require("jschardet");
 
 export async function read(path: string): Promise<string>
 {
@@ -17,7 +15,7 @@ export async function read(path: string): Promise<string>
 		fd = await openFile(path, "r");
 
 		let buffer = new Buffer(stat.size);
-		let readBomResult = await readFile(fd, buffer, 0, stat.size, 0);
+		await readFile(fd, buffer, 0, stat.size, 0);
 
 		result = decode(buffer);
 	}

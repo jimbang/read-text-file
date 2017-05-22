@@ -1,6 +1,6 @@
 {
   "name": "read-text-file",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "keywords": [
     "textfile",
     "text",
@@ -20,37 +20,16 @@
     "url": "https://github.com/matgr1/read-text-file"
   },
   "devDependencies": {
-    "@types/node": "^6.0.45",
-    "@types/iconv-lite": "0.0.1",
-    "babel-cli": "^6.16.0",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "typescript": "2.0.3"
+    "@types/node": "^7.0.21",
+    "@types/iconv-lite": "^0.0.1",
+    "typescript": "^2.2.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.11.6",
-    "iconv-lite": "^0.4.13",
-    "jschardet": "^1.4.1"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ],
-    "sourceMaps": "inline",
-    "plugins": [
-      [
-        "transform-runtime",
-        {
-          "polyfill": true,
-          "regenerator": true
-        }
-      ]
-    ]
+    "iconv-lite": "^0.4.17",
+    "jschardet": "^1.4.2"
   },
   "scripts": {
-    "build:ts": "tsc -p ./src/tsconfig.json",
-    "build:babel": "babel build -d dist",
-    "build": "npm run build:ts && npm run build:babel",
+    "build": "tsc -p ./tsconfig.json",
     "prepublish": "npm run build"
   }
 }
